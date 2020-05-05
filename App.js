@@ -9,17 +9,24 @@ import light from './light.json';
 import { Card } from 'react-native-paper';
 
 
+
 class MainApp extends Component {
 	constructor(props) {
 		super(props);
+		// Binding the function of opening the Smart Jar to open the smart jar
 		this.FunctionToOpenSmartJar = this.FunctionToOpenSmartJar.bind(this);
+		// Same with the Light Controller
 		this.FunctionToOpenLightControl = this.FunctionToOpenLightControl.bind(this);
 
 	}
+	
+	// To navigate to the Smart Jar page
 
 	FunctionToOpenSmartJar() {
 		this.props.navigation.navigate('Jar');
 	}
+
+	// To navigate to the Light Control Page
 
 	FunctionToOpenLightControl() {
 		this.props.navigation.navigate('Light');
@@ -32,6 +39,8 @@ class MainApp extends Component {
 			<Text style={styles.paragrapgh}>
 			Welcome to Smart Home Systems
 			</Text>
+			
+			// Creating buttons for the purpose of navigation
 
 			<Button type='submit' value="submit" variant="outline-primary" onPress={this.FunctionToOpenSmartJar} title='Smart Jar'>Smart Jar
 			</Button>
@@ -43,6 +52,8 @@ class MainApp extends Component {
 		);
 	}
 }
+
+// Class to determine what happens inside the Smart Jar Page
 
 class SmartJar extends Component { 
 	
@@ -57,14 +68,22 @@ class SmartJar extends Component {
 			<Text style={styles.paragraph}>
 			Shopping List
 			</Text>
+			
+			// To list the Shopping list
+
 			<FlatList 
 			data={jar}
 			showsVerticalScrollIndicator={false}
 			renderItem={({item}) => 
 				<View>
+
+				// To fetch the item with the keyword 'id' and display the same in the output
 				<Text>{item.id}</Text>
 				</View>
 			}
+
+			// Convert the array to a string and display the output in a string format
+
 			keyExtractor={(item, index) => index.toString()}
 			/>
 			</View>
@@ -91,6 +110,9 @@ class LightControl extends Component {
 			showsVerticalScrollIndicator={false}
 			renderItem={({item}) => 
 				<View>
+				
+				// To fetch the item with the keryword 'name' and display the same in the output
+
 				<Text>{item.name}</Text>
 				</View>
 			}
@@ -101,6 +123,8 @@ class LightControl extends Component {
 		);
 	}
 }
+
+// Matching the keywrods used above in class definition to the respective pages
 
 const RootStack = createStackNavigator(
 	{
@@ -124,6 +148,8 @@ export default class App extends Component {
 		return <AppContainer />
 	}
 }
+
+// Improving the User Interface
 
 const styles = StyleSheet.create( {
 	paragraph: {
