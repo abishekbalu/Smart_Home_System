@@ -12,6 +12,6 @@
 * The default bluetooth manager with linux operating system does not establish a proper connection with the EV3 brick. Thus, a bluetooth manager package named Blueman is installed with the following commands. 
 
 * For Debian System,
-... 
+```
 sudo apt-get install blueman
-...
+```
