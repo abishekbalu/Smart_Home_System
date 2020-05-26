@@ -25,3 +25,6 @@ sudo dnf install blueman
 * On the ev3 make sure the bluetooth is turned on and is visible. 
 * Back in the host computer, in the blueman window, select search to search the EV3. Once EV3 is visible, select pair to pair the device with the host computer. Once Paired, mark it as favourite ( the star button) to make sure that the EV3 is connected to the host computer everytime both are switched on. 
 * In the brickman, select Wireless and Networks > All Network Connections and select connect to connect the EV3 to the host computer. 
+Once the Connect is pressed, the state should change to Connected. 
+
+## Establishing an SSH connection with the EV3 brick.
