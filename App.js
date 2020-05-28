@@ -6,7 +6,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import jar from './jar.json';
 import light from './light.json';
-import { Card } from 'react-native-paper';
+//import { Card } from 'react-native-paper';
 
 
 
@@ -36,11 +36,12 @@ class MainApp extends Component {
 		return (
 			<React.Fragment>
 			<View style={styles.container}>
-			<Text style={styles.paragraph}>
-				Welcome to Smart Home Systems!!!! 
-			</Text>
+			 <Text 
+			 style={styles.paragraph}>
+		 	 Welcome to Smart Home Systems!!!! 
+			 </Text>
 			
-			// Creating buttons for the purpose of navigation
+			{/* Creating buttons for the purpose of navigation */}
 
 			<Button type='submit' value="submit" variant="outline-primary" onPress={this.FunctionToOpenSmartJar} title='Smart Jar'>Smart Jar
 			</Button>
@@ -69,7 +70,7 @@ class SmartJar extends Component {
 			Shopping List
 			</Text>
 			
-			// To list the Shopping list
+			{/* To list the Shopping list */}
 
 			<FlatList 
 			data={jar}
@@ -77,12 +78,12 @@ class SmartJar extends Component {
 			renderItem={({item}) => 
 				<View>
 
-				// To fetch the item with the keyword 'id' and display the same in the output
+				{/* To fetch the item with the keyword 'id' and display the same in the output */}
 				<Text>{item.id}</Text>
 				</View>
 			}
 
-			// Convert the array to a string and display the output in a string format
+			/* Convert the array to a string and display the output in a string format */
 
 			keyExtractor={(item, index) => index.toString()}
 			/>
@@ -111,7 +112,7 @@ class LightControl extends Component {
 			renderItem={({item}) => 
 				<View>
 				
-				// To fetch the item with the keryword 'name' and display the same in the output
+				{/* To fetch the item with the keryword 'name' and display the same in the output */}
 
 				<Text>{item.name}</Text>
 				</View>
