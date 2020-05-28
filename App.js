@@ -36,8 +36,8 @@ class MainApp extends Component {
 		return (
 			<React.Fragment>
 			<View style={styles.container}>
-			<Text style={styles.paragrapgh}>
-			Welcome to Smart Home Systems
+			<Text style={styles.paragraph}>
+				Welcome to Smart Home Systems!!!! 
 			</Text>
 			
 			// Creating buttons for the purpose of navigation
